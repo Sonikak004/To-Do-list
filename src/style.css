@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto:ital,wght@1,300&display=swap');
+
 .container {
   width: 400px;
   margin: 0 auto;
@@ -9,8 +11,15 @@
 }
 
 h1 {
-  text-align: center;
-  font-size: large;
+  text-align: left;
+  font-size: small;
+  color: #5e5c5c;
+  font-family: 'inter', sans-serif;
+}
+
+#deleteAllBtn {
+  color: #5e5c5c;
+  font-family: 'inter', sans-serif;
 }
 
 .input-container {
@@ -18,34 +27,18 @@ h1 {
   margin-bottom: 10px;
 }
 
-.input-container input[type="text"] {
-  flex: 1;
-  margin-right: 10px;
-  font-style: italic;
-}
 
 button {
   cursor: pointer;
-}
-
-.task {
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
-}
-
-.task input[type="checkbox"] {
-  margin-right: 10px;
-}
-
-.task .delete-icon {
-  color: red;
-  margin-left: auto;
-  cursor: pointer;
-}
-
-.completed {
-  text-decoration: line-through;
+  width: 440px;
+  margin-bottom: -20px;
+  height: 47px;
+  margin-left: -20px;
+  border-top: 1px solid #a8a7a7;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  background-color: #e9e9e9;
 }
 
 .wrapper {
@@ -53,4 +46,57 @@ button {
   height: 97vh;
   align-content: center;
   flex-wrap: wrap;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.task input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.options {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.options span {
+  padding: 2px;
+}
+
+.fas {
+  color: #adadad;
+  font-size: small;
+  cursor: pointer;
+}
+
+.fa-sync-alt {
+  color: #adadad;
+  font-size: small;
+  width: 300px;
+  text-align: right;
+  cursor: pointer;
+}
+
+#taskInput {
+  border: none;
+  box-shadow: 1px 1px 1px 1px gainsboro;
+  width: 100%;
+  height: 31px;
+  margin-top: 13px;
+  font-style: italic;
+}
+
+#taskInput:focus-visible {
+  outline: none;
+}
+
+.font {
+  font-family: 'Inter', sans-serif;
+  font-size: small;
 }
