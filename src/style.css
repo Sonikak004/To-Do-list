@@ -1,0 +1,56 @@
+.container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #c6c0c0;
+  box-shadow: 2px 2px 2px 2px #e6e3e3;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  font-size: large;
+}
+
+.input-container {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.input-container input[type="text"] {
+  flex: 1;
+  margin-right: 10px;
+  font-style: italic;
+}
+
+button {
+  cursor: pointer;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.task input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.task .delete-icon {
+  color: red;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.wrapper {
+  display: flex;
+  height: 97vh;
+  align-content: center;
+  flex-wrap: wrap;
+}
