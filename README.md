@@ -15,8 +15,9 @@
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
-
-# 📖 Capstone-Project <a name="about-project"></a>
+<br/>
+ 📖 List of To Do tasks built using webpack and served by a webpack dev server. <a name="about-project"></a>
+<br/>
 
 ## 🛠 Built With <a name="built-with"></a>
 
