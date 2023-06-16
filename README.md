@@ -1,12 +1,22 @@
 <a name="readme-top"></a>
 
-<h1>To Do List</h1>
+<div align="center">
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
+
+  <h2><b>To Do List</b></h2>
+
+</div>
 
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
 - [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Usage](#usage)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -14,64 +24,71 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
-<br/>
- 📖 List of To Do tasks built using webpack and served by a webpack dev server. <a name="about-project"></a>
-<br/>
+# 📖 To Do List <a name="about-project"></a>
+
+**To Do List** is a List of To Do tasks built using webpack and served by a webpack dev server.
 
 ## 🛠 Built With <a name="built-with"></a>
 
-    HTML
-    CSS
-    Webpack
-    Javascript
+### Tech Stack <a name="tech-stack"></a>
+
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JAVASCRIPT</a></li>
+    <li><a href="#">Webpack</a></li>
+  </ul>
+</details>
+
+### Key Features <a name="key-features"></a>
+
+- **User Interface**
+- **Task Management**
+- **Interactivity**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+To get a local copy up and running, follow these steps.
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-- Open the command prompt in the created directory.
+  cd my-folder 
+   <br/>
+  git clone https://github.com/Sonikak004/To-Do-list.git
 
-- On the terminal run this command git clone https://github.com/Sonikak004/To-Do-list.git
 
-- Go to the repository folder using command prompt cd.
+### Usage
 
-- Install the dev dependencies for linters run npm install.
-  --->
+To run the project, execute the following command:
+ 
+ cd path/to/project 
+ <br/>
+ npm start
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## 👥 Author <a name="authors"></a>
 
-<!-- Author -->
+👤 **Author**
 
-👤 **Sonika Kumar**
-
-- GitHub: [sonikak004](https://github.com/sonikak004)
+- GitHub: [@sonikak004](https://github.com/sonikak004)
 - Twitter: [@sonikak004](https://twitter.com/sonikak004)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/sonikak004/)
+- LinkedIn: [sonikak004](https://linkedin.com/in/sonikak004)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Add Drag and drop function
-
-- Add customized files
-
-- Add local storage feature
+- [ ] **Drag and Drop**
+- [ ] **Local Storage**
+- [ ] **Accessibility**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -81,19 +98,17 @@ Feel free to check the [issues page](https://github.com/Sonikak004/To-Do-list/is
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
-⭐️ if you like this project!!
+If you like this project please give me a star!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I thank microverse for giving this amazing oppurtunity.
+I would like to thank Microverse for giving me this oppurtunity.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -104,4 +119,3 @@ I thank microverse for giving this amazing oppurtunity.
 This project is [MIT](./mit.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
