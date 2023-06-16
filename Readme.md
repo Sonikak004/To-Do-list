@@ -84,7 +84,7 @@ Feel free to check the [issues page](https://github.com/Sonikak004/To-Do-list/is
 
 ## ⭐️ Show your support <a name="support"></a>
 
-⭐️ if you like this project!
+⭐️ if you like this project!!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
