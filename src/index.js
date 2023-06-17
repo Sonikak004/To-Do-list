@@ -1,42 +1,95 @@
 import './style.css';
 
-const tasks = [
-  { description: 'First task', completed: false, index: 1 },
-  { description: 'Second task', completed: true, index: 2 },
-  { description: 'Third task', completed: false, index: 3 },
-  { description: 'Fourth task', completed: true, index: 4 },
-  { description: 'Fifth task', completed: false, index: 5 },
-];
+let tasks = [];
 
-function renderTasks() {
+const renderTasks = () => {
   const taskList = document.getElementById('taskList');
   taskList.innerHTML = '';
 
+  const updateIndexes = () => {
+    tasks.forEach((task, index) => {
+      task.index = index + 1;
+    });
+  };
+
+  const saveTasks = () => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  };
+
+  const addTask = () => {
+    const taskInput = document.getElementById('taskInput');
+    const newTask = {
+      description: taskInput.value,
+      completed: false,
+      index: tasks.length + 1,
+    };
+
+    tasks.push(newTask);
+    saveTasks();
+    renderTasks();
+    taskInput.value = '';
+  };
+
+  const toggleTaskStatus = (index) => {
+    tasks[index - 1].completed = !tasks[index - 1].completed;
+    saveTasks();
+    renderTasks();
+  };
+
+  const deleteTask = (index) => {
+    tasks = tasks.filter((task) => task.index !== index);
+    updateIndexes();
+    saveTasks();
+    renderTasks();
+  };
+
+  const editTask = (index, newDescription) => {
+    tasks[index - 1].description = newDescription;
+    saveTasks();
+    renderTasks();
+  };
+
   tasks.forEach((task) => {
-    const listItem = document.createElement('div');
-    listItem.classList.add('task');
+    const li = document.createElement('li');
+    li.className = 'task';
 
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.checked = task.completed;
-    listItem.appendChild(checkbox);
+    checkbox.addEventListener('change', () => toggleTaskStatus(task.index));
+    li.appendChild(checkbox);
 
-    const description = document.createElement('span');
-    description.textContent = task.description;
-    description.classList.add('font');
-    listItem.appendChild(description);
+    const taskDescription = document.createElement('input');
+    taskDescription.classList.add('inputoutline');
+    taskDescription.type = 'text';
+    taskDescription.value = task.description;
+    taskDescription.addEventListener('change', () => {
+      editTask(task.index, taskDescription.value);
+    });
+    li.appendChild(taskDescription);
 
-    const options = document.createElement('div');
-    options.classList.add('options');
+    const deleteIcon = document.createElement('i');
+    deleteIcon.className = 'delete-icon fas fa-trash-alt';
+    deleteIcon.addEventListener('click', () => deleteTask(task.index));
+    li.appendChild(deleteIcon);
 
-    const dots = document.createElement('i');
-    dots.classList.add('fas', 'fa-ellipsis-v');
-    options.appendChild(dots);
-
-    listItem.appendChild(options);
-
-    taskList.appendChild(listItem);
+    taskList.appendChild(li);
   });
-}
+
+  const loadTasks = () => {
+    const savedTasks = localStorage.getItem('tasks');
+    if (savedTasks) {
+      tasks = JSON.parse(savedTasks);
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const addTaskBtn = document.getElementById('addTaskBtn');
+    addTaskBtn.addEventListener('click', addTask);
+
+    loadTasks();
+    renderTasks();
+  });
+};
 
 renderTasks();
