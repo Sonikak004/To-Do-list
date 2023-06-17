@@ -2,18 +2,18 @@ import './style.css';
 
 let tasks = [];
 
-const renderTasks = () => {
+export default function renderTasks() {
   const taskList = document.getElementById('taskList');
   taskList.innerHTML = '';
+
+  const saveTasks = () => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  };
 
   const updateIndexes = () => {
     tasks.forEach((task, index) => {
       task.index = index + 1;
     });
-  };
-
-  const saveTasks = () => {
-    localStorage.setItem('tasks', JSON.stringify(tasks));
   };
 
   const addTask = () => {
@@ -66,6 +66,11 @@ const renderTasks = () => {
     taskDescription.addEventListener('change', () => {
       editTask(task.index, taskDescription.value);
     });
+
+    if (task.completed) {
+      taskDescription.classList.add('completed');
+    }
+
     li.appendChild(taskDescription);
 
     const deleteIcon = document.createElement('i');
@@ -83,13 +88,23 @@ const renderTasks = () => {
     }
   };
 
+  const clearAllTasks = () => {
+    tasks = tasks.filter((task) => !task.completed);
+    updateIndexes();
+    saveTasks();
+    renderTasks();
+  };
+
   document.addEventListener('DOMContentLoaded', () => {
     const addTaskBtn = document.getElementById('addTaskBtn');
     addTaskBtn.addEventListener('click', addTask);
 
+    const clearAllBtn = document.getElementById('deleteAllBtn');
+    clearAllBtn.addEventListener('click', clearAllTasks);
+
     loadTasks();
     renderTasks();
   });
-};
+}
 
 renderTasks();
