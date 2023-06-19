@@ -4,7 +4,7 @@
   <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h2><b>To Do List</b></h2>
+  <h2><b>To-Do List</b></h2>
 
 </div>
 
