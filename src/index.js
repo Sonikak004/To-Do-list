@@ -99,3 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
   loadTasks();
   renderTasks();
 });
+
+module.exports = {
+  clearAllTasks, addTask,
+};
