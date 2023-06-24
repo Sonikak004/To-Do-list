@@ -9,7 +9,7 @@ const saveTasks = () => {
   localStorage.setItem('tasks', JSON.stringify(tasks));
 };
 
-const renderTasks = () => {
+export const renderTasks = () => {
   const taskList = document.getElementById('taskList');
 
   if (taskList) {
@@ -83,7 +83,6 @@ export const addTask = () => {
 export const clearAllTasks = () => {
   tasks = tasks.filter((task) => !task.completed);
 
-  // Update the indexes of the remaining tasks
   tasks.forEach((task, index) => {
     task.index = index + 1;
   });
