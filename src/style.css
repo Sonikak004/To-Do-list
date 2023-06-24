@@ -22,15 +22,6 @@ h1 {
   font-family: 'inter', sans-serif;
 }
 
-button:hover {
-  background-color: #f7f7f7;;
-}
-
-.input-container {
-  display: flex;
-  margin-bottom: 10px;
-}
-
 button {
   cursor: pointer;
   width: 440px;
@@ -42,6 +33,15 @@ button {
   border-right: none;
   border-bottom: none;
   background-color: #e9e9e9;
+}
+
+button:hover {
+  background-color: #f7f7f7;
+}
+
+.input-container {
+  display: flex;
+  margin-bottom: 10px;
 }
 
 #addTaskBtn {
@@ -126,5 +126,3 @@ button {
   text-decoration: line-through;
   opacity: 0.5;
 }
-
-
