@@ -126,3 +126,46 @@ describe('editTask function', () => {
     });
   });
 });
+
+// part 2 test 3
+
+describe('toggleTaskStatus function', () => {
+  test('should toggle the completed status of a task when the checkbox is changed', () => {
+    const tasks = [
+      { description: 'Task 1', completed: false, index: 1 },
+      { description: 'Task 2', completed: true, index: 2 },
+    ];
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    renderTasks();
+
+    const taskCheckboxes = document.querySelectorAll('.task input[type="checkbox"]');
+
+    taskCheckboxes.forEach((checkbox, index) => {
+      const initialCompletedStatus = tasks[index].completed;
+      checkbox.checked = !initialCompletedStatus;
+
+      checkbox.dispatchEvent(new Event('change'));
+
+      expect(tasks[index].completed).toBe(!initialCompletedStatus);
+    });
+  });
+});
+
+describe('updateTaskStatus function', () => {
+  test('should update the completed status of a task', () => {
+    const tasks = [
+      { description: 'Task 1', completed: false, index: 1 },
+      { description: 'Task 2', completed: false, index: 2 },
+      { description: 'Task 3', completed: false, index: 3 },
+    ];
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    renderTasks();
+    const checkboxes = document.querySelectorAll('.task input[type="checkbox"]');
+    checkboxes.forEach((checkbox, index) => {
+      const updatedStatus = !tasks[index].completed;
+      checkbox.checked = updatedStatus;
+      checkbox.dispatchEvent(new Event('change'));
+      expect(tasks[index].completed).toBe(updatedStatus);
+    });
+  });
+});
