@@ -79,6 +79,14 @@ To run the project, execute the following command:
 - Twitter: [@sonikak004](https://twitter.com/sonikak004)
 - LinkedIn: [sonikak004](https://linkedin.com/in/sonikak004)
 
+👤 **Author2**
+
+👤 Sadaf Daneshgar
+
+- GitHub: [@githubhandle](https://github.com/sadaf-Daneshgar)
+- Twitter: [@twitterhandle](https://twitter.com/SadafDaneshgar)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/sadaf-barekzai-00480a242)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
