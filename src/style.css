@@ -22,6 +22,10 @@ h1 {
   font-family: 'inter', sans-serif;
 }
 
+button:hover {
+  background-color: #f7f7f7;;
+}
+
 .input-container {
   display: flex;
   margin-bottom: 10px;
